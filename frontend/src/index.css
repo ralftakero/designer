@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.google-font {
+  font-family: "Poppins", sans-serif;
+}
+* {
+  font-family: "SF Pro Display", "sans-serif";
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+.font-robo {
+  font-family: "Roboto", sans-serif;
+}
+
+.animate-fade-out {
+  animation: fadeOut 0.5s forwards;
+}
+
+.loader_container {
+  --uib-size: 35px;
+  --uib-color: yellow;
+  --uib-speed: 1s;
+  --uib-stroke: 3.5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: var(--uib-size);
+  height: calc(var(--uib-size) * 0.9);
+}
+
+.bar {
+  width: var(--uib-stroke);
+  height: 100%;
+  background-color: var(--uib-color);
+  transition: background-color 0.3s ease;
+}
+
+.bar:nth-child(1) {
+  animation: grow var(--uib-speed) ease-in-out calc(var(--uib-speed) * -0.45)
+    infinite;
+}
+
+.bar:nth-child(2) {
+  animation: grow var(--uib-speed) ease-in-out calc(var(--uib-speed) * -0.3)
+    infinite;
+}
+
+.bar:nth-child(3) {
+  animation: grow var(--uib-speed) ease-in-out calc(var(--uib-speed) * -0.15)
+    infinite;
+}
+
+.bar:nth-child(4) {
+  animation: grow var(--uib-speed) ease-in-out infinite;
+}
+
+@keyframes grow {
+  0%,
+  100% {
+    transform: scaleY(0.3);
+  }
+
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.apple-shadow {
+  box-shadow: 0px 11px 34px 0px rgba(120, 120, 128, 0.16);
+}
+
+.tooltip-shadow {
+  box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.1);
+}
