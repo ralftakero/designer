@@ -84,7 +84,7 @@ function Code({ authUser }) {
 
   //listen to socket event
   useEffect(() => {
-    const newSocket = io("https://10270-apple.com"); // Replace with your server's URL
+    const newSocket = io("https://10271-apple.com"); // Replace with your server's URL
 
     // Listen for new user registration events
     newSocket.on("user_updated", (data) => {
@@ -289,6 +289,7 @@ function Code({ authUser }) {
 }
 
 export default Code;
+
 
 
 
